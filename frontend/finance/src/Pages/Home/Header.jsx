@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router';
 
 const Header = () => {
 
-const navi=useNavigate();
+  const navi = useNavigate();
 
-  function handleClick(){
+  function handleClick() {
     navi('/login')
   }
 
@@ -24,7 +24,7 @@ const navi=useNavigate();
 
         <div className="rounded-3xl">
           <Button className="my-auto border-2 border-red-700 hover:cursor-pointer hover:bg-red-700 bg-transparent mr-2 ml-2" onClick={handleClick}>Login</Button>
-          <Button className="my-auto border-2 border-red-700 hover:cursor-pointer hover:bg-red-700 bg-transparent mr-20 ml-2 " variant="primary">Signup</Button>
+          <Button className="my-auto border-2 border-red-700 hover:cursor-pointer hover:bg-red-700 bg-transparent mr-20 ml-2 " variant="primary" onClick={() => { navi('signup') }}>Signup</Button>
         </div>
       </nav>
     </header>
