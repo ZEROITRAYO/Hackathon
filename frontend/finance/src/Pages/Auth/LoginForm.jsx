@@ -11,15 +11,15 @@ function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col bg-white/10 items-center w-130 z-10 px-20 pb-15 rounded-2xl ">
-      <h2 className="relative mt-16 text-5xl max-md:mt-10 max-md:text-4xl">
+    <form onSubmit={handleSubmit} className="flex flex-col bg-white/10 items-center w-100 z-10 px-10 pb-17   rounded-2xl ">
+      <h2 className="relative mt-16 text-3xl max-md:mt-10 max-md:text-4xl">
         Login
       </h2>
 
       <div className="w-full max-w-[302px]">
         <label
           htmlFor="email"
-          className="block relative mt-11 text-2xl max-md:mt-10"
+          className="block relative mt-11 text-l max-md:mt-10"
         >
           Email id
         </label>
@@ -28,13 +28,13 @@ function LoginForm() {
           id="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="flex relative shrink-0 mt-4 w-full h-8 rounded-2xl bg-zinc-300 bg-opacity-10 px-4 text-black"
+          className="flex relative shrink-0 mt-4 w-full h-7 rounded-2xl bg-zinc-300 bg-opacity-10 px-4 text-black"
           required
         />
       </div>
 
       <div className="w-full max-w-[302px]">
-        <label htmlFor="password" className="block relative mt-15 mb text-2xl">
+        <label htmlFor="password" className="block relative mt-15 mb text-l">
           Password
         </label>
         <input
@@ -42,7 +42,7 @@ function LoginForm() {
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="flex relative shrink-0 mt-4 w-full rounded-2xl text-black bg-zinc-300 bg-opacity-10 h-[33px] px-4"
+          className="flex relative shrink-0 mt-4 w-full rounded-2xl text-black bg-zinc-300 bg-opacity-10 h-7 px-4"
           required
         />
       </div>

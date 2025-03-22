@@ -5,12 +5,12 @@ import HeroSection from "./Hero";
 const DashboardPage = () => {
   return (
     <main >
-      <div className="flex relative flex-col items-center px-20 pt-24 pb-56 w-full md:h-full max-md:px-5 max-md:pb-24 max-md:max-w-full">
+      <div className="flex relative flex-col items-center px-20 pt-24 pb-20 w-full md:h-full max-md:px-5 max-md:pb-24 max-md:max-w-full">
         <Header />
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/21412f73d7fff4d82cfdebac446d97f36084d66b?placeholderIfAbsent=true&apiKey=6b1c9c0a5e6d416dbf10a19cc8dd94dd"
           alt="Background"
-          className="object-cover absolute inset-0 size-full rounded-none"
+          className="object-cover absolute inset-0 size-400 rounded-none"
         />
 
         <div className="flex relative px-0 justify-center">
