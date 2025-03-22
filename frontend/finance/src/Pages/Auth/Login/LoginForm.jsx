@@ -1,16 +1,48 @@
-"use client";
 import React, { useState } from "react";
 import { LuEye, LuEyeClosed } from "react-icons/lu";
+import {validateEmail} from '../../../utils/helper'
 
 function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e)=>{
     e.preventDefault();
-    // Handle form submission
-  };
+
+    if(!validateEmail(email)){
+      setError("Please enter a valid email");
+      return;
+    }
+    if(!password){
+      setError("Please enter the password");
+      return;
+    }
+
+    setError("");
+
+
+
+    //Login API Call
+    try{
+      const response = await axiosInstance.post(API_PATHS.AUTH.LOGIN,{
+        email,password,
+      });
+
+    }
+    catch(err){
+      if(err.response && err.response.data.message){
+        setError(err.response.data.message);
+      }
+      else{
+        setError("something went wrong please try again");
+      }
+    }
+
+  }
+
+
+
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col bg-white/10 items-center w-100 z-10 px-10 pb-10   rounded-2xl ">
