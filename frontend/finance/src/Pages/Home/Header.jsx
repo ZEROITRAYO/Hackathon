@@ -1,7 +1,15 @@
 import * as React from "react";
 import Button from "../../components/Button";
+import { useNavigate } from 'react-router';
 
 const Header = () => {
+
+const navi=useNavigate();
+
+  function handleClick(){
+    navi('/login')
+  }
+
   return (
     <header className="m-5 flex flex-wrap justify-between w-full whitespace-nowrap max-md:max-w-full md:max-h-full bg-transparent rounded-none z-10 fixed top-0">
       <div className="flex gap-1.5 self-start mt-2.5 text-3xl text-white ml-5">
@@ -15,7 +23,7 @@ const Header = () => {
       <nav className="flex gap-10 text-xl text-slate-400">
 
         <div className="rounded-3xl">
-          <Button className="my-auto hover:cursor-pointer hover:bg-red-700 bg-transparent mr-2 ml-2" >Login</Button>
+          <Button className="my-auto hover:cursor-pointer hover:bg-red-700 bg-transparent mr-2 ml-2" onClick={handleClick}>Login</Button>
           <Button className="hover:cursor-pointer hover:bg-red-700 mr-2 ml-2" variant="primary">Signup</Button>
         </div>
       </nav>
