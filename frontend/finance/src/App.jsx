@@ -1,5 +1,6 @@
 import './App.css'
 import Home from './Pages/Home/Home'
+import Login from './Pages/Auth/Login'
 import {BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element ={<Home/>}/>
+          <Route path ="/login" exact element ={<Login/>}/>
         </Routes>
       </Router>
     </>
